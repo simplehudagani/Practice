@@ -1,0 +1,31 @@
+# --- 
+# apiVersion: apps/v1beta1
+# kind: Deployment
+# metadata: 
+#   name: foct-deploy
+# spec: 
+#   containers: 
+#     - 
+#       image: "anil2/factorial:1"
+#       name: foct-container1
+#       ports: 
+#         - 
+#           containerPort: 8000
+
+
+apiVersion: extensions/v1beta1:latest
+kind: Deployment
+metadata:
+  name: facto-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: facto
+    spec:
+      containers:
+      - name: facto
+        image: anil2/factorial:1
+        ports:
+        - containerPort: 80
