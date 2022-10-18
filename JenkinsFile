@@ -1,37 +1,37 @@
-pipeline{
-    agent any
-    tools{
-        maven 'Maven'
-    }
-    stages{
-        stage("SCM Checkout"){
-            steps{
-            git 'https://github.com/samben01/KarateWithJenkins.git'
-            }
-        }
-        stage("Maven Build"){
-            steps{
-                bat 'mvn clean package'
-            }
-        }
-    }
-}
-
-
-
-
-
-
-// pipeline {
- 
-//   agent any
-
-//   stages {
-//     stage('Build') {
-//       steps {
-//         sh 'go version'
-//       }
+// pipeline{
+//     agent any
+//     tools{
+//         maven 'Maven'
 //     }
-//   }
+//     stages{
+//         stage("SCM Checkout"){
+//             steps{
+//             git 'https://github.com/samben01/KarateWithJenkins.git'
+//             }
+//         }
+//         stage("Maven Build"){
+//             steps{
+//                 bat 'mvn clean package'
+//             }
+//         }
+//     }
 // }
+
+
+
+
+
+
+pipeline {
+ 
+  agent any
+
+  stages {
+    stage('Build') {
+      steps {
+        sh 'go version'
+      }
+    }
+  }
+}
 
