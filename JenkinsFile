@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('check') {
       steps {
-        bat 'go version'
+        bat 'go run main.go'
       }
     }
   }
