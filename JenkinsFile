@@ -27,7 +27,7 @@ pipeline {
   agent any
 
   stages {
-    stage('Build') {
+    stage('check') {
       steps {
         sh 'go version'
       }
